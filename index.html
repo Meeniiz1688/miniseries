@@ -85,6 +85,10 @@
     📌 อัปเดตใหม่ล่าสุด พร้อมลิงก์ดูทุกเรื่อง
   </h1>
 
+  <div style="text-align: center; margin-bottom: 30px;">
+    <input type="text" id="searchInput" placeholder="🔍 ค้นหาชื่อซีรีส์..." style="padding: 10px 16px; width: 80%; max-width: 400px; border-radius: 8px; border: none; font-size: 16px;">
+  </div>
+
   <div class="catalog">
     <div class="item">
       <img src="https://i.imgur.com/kgPsbkY.jpeg" alt="เจ้านายคลั่งรักฉันสุด ๆ">
@@ -94,7 +98,6 @@
         <a href="javascript:void(0);" onclick="openShopee('https://s.shopee.co.th/5Afti44uTw', 'https://www.youtube.com/')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=สายลับลิปกลอส" alt="สายลับลิปกลอส">
       <div class="content">
@@ -103,7 +106,6 @@
         <a href="javascript:void(0);" onclick="openShopee('234567890', 'https://www.example.com/ดูซีรีส์2')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=แสงดาวแห่งหัวใจ" alt="แสงดาวแห่งหัวใจ">
       <div class="content">
@@ -112,7 +114,6 @@
         <a href="javascript:void(0);" onclick="openShopee('345678901', 'https://www.example.com/ดูซีรีส์3')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=เงารักลวงใจ" alt="เงารักลวงใจ">
       <div class="content">
@@ -121,7 +122,6 @@
         <a href="javascript:void(0);" onclick="openShopee('456789012', 'https://www.example.com/ดูซีรีส์4')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=สูตรรักฉบับเชฟ" alt="สูตรรักฉบับเชฟ">
       <div class="content">
@@ -130,7 +130,6 @@
         <a href="javascript:void(0);" onclick="openShopee('567890123', 'https://www.example.com/ดูซีรีส์5')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=เพลิงแค้นแสนรัก" alt="เพลิงแค้นแสนรัก">
       <div class="content">
@@ -139,7 +138,6 @@
         <a href="javascript:void(0);" onclick="openShopee('678901234', 'https://www.example.com/ดูซีรีส์6')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=หวานใจนายซุปเปอร์สตาร์" alt="หวานใจนายซุปเปอร์สตาร์">
       <div class="content">
@@ -148,7 +146,6 @@
         <a href="javascript:void(0);" onclick="openShopee('789012345', 'https://www.example.com/ดูซีรีส์7')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=บันทึกรักนางฟ้า" alt="บันทึกรักนางฟ้า">
       <div class="content">
@@ -157,7 +154,6 @@
         <a href="javascript:void(0);" onclick="openShopee('890123456', 'https://www.example.com/ดูซีรีส์8')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=หัวใจในสายลมหนาว" alt="หัวใจในสายลมหนาว">
       <div class="content">
@@ -166,7 +162,6 @@
         <a href="javascript:void(0);" onclick="openShopee('901234567', 'https://www.example.com/ดูซีรีส์9')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=รักรีเทิร์น" alt="รักรีเทิร์น">
       <div class="content">
@@ -175,7 +170,6 @@
         <a href="javascript:void(0);" onclick="openShopee('012345678', 'https://www.example.com/ดูซีรีส์10')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=คู่จิ้นฟินเวอร์" alt="คู่จิ้นฟินเวอร์">
       <div class="content">
@@ -184,7 +178,6 @@
         <a href="javascript:void(0);" onclick="openShopee('123456780', 'https://www.example.com/ดูซีรีส์11')">ดูเลย</a>
       </div>
     </div>
-
     <div class="item">
       <img src="https://via.placeholder.com/300x450?text=ตามหาหัวใจ" alt="ตามหาหัวใจ">
       <div class="content">
@@ -197,14 +190,22 @@
 
   <script>
     function openShopee(shopeeLink, redirectUrl) {
-  // เปิดแอป Shopee โดยใช้ลิงก์ที่เกี่ยวข้อง
-  window.location.href = shopeeLink;
+      window.location.href = shopeeLink;
+      setTimeout(function () {
+        window.location.href = redirectUrl;
+      }, 2000);
+    }
 
-  setTimeout(function () {
-    // หากแอป Shopee ไม่เปิดภายใน 2 วินาที ให้ไปที่เว็บไซต์
-    window.location.href = redirectUrl;  // ลิงก์ดูซีรีส์ที่ต้องการ
-  }, 2000); // 2 วินาที
-}
+    // ระบบค้นหาชื่อเรื่อง
+    document.getElementById("searchInput").addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      const items = document.querySelectorAll(".item");
+
+      items.forEach(item => {
+        const title = item.querySelector("h3").textContent.toLowerCase();
+        item.style.display = title.includes(query) ? "flex" : "none";
+      });
+    });
   </script>
 </body>
 </html>
