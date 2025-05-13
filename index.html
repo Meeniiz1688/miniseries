@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ดูซีรีส์สุดฮิต</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    .item {
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    .item:hover {
+      transform: translateY(-5px);
+    }
+    .item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-bottom: 3px solid #333;
+    }
+    .item .content {
+      padding: 12px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .item .content h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #fff;
+    }
+    .item .content p {
+      font-size: 14px;
+      color: #bdbdbd;
+      margin: 0;
+    }
+    .item .content a {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 14px;
+      background: #ff3d00;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+    .item .content a:hover {
+      background: #ff6e40;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 รวมซีรีส์เด็ด ห้ามพลาด!<br>
+    ครบรสทั้งดราม่า โรแมนติก แอคชั่น ดูยาวๆ ไม่มีเบื่อ<br>
+    📌 อัปเดตใหม่ล่าสุด พร้อมลิงก์ดูทุกเรื่อง
+  </h1>
+
+  <div class="catalog">
+    <div class="item">
+      <img src="https://i.imgur.com/kgPsbkY.jpeg" alt="เจ้านายคลั่งรักฉันสุด ๆ">
+      <div class="content">
+        <h3>เจ้านายคลั่งรักฉันสุด ๆ</h3>
+        <p>ซีรีส์รักโรแมนติกสุดฟิน</p>
+        <a href="javascript:void(0);" onclick="openShopee('https://s.shopee.co.th/5Afti44uTw', 'https://www.youtube.com/')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=สายลับลิปกลอส" alt="สายลับลิปกลอส">
+      <div class="content">
+        <h3>สายลับลิปกลอส</h3>
+        <p>สายลับสาวสุดเก๋แห่งยุค</p>
+        <a href="javascript:void(0);" onclick="openShopee('234567890', 'https://www.example.com/ดูซีรีส์2')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=แสงดาวแห่งหัวใจ" alt="แสงดาวแห่งหัวใจ">
+      <div class="content">
+        <h3>แสงดาวแห่งหัวใจ</h3>
+        <p>รักปะทะดราม่าสุดเข้มข้น</p>
+        <a href="javascript:void(0);" onclick="openShopee('345678901', 'https://www.example.com/ดูซีรีส์3')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=เงารักลวงใจ" alt="เงารักลวงใจ">
+      <div class="content">
+        <h3>เงารักลวงใจ</h3>
+        <p>ลึกลับ ซ่อนปม ซ่อนรัก</p>
+        <a href="javascript:void(0);" onclick="openShopee('456789012', 'https://www.example.com/ดูซีรีส์4')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=สูตรรักฉบับเชฟ" alt="สูตรรักฉบับเชฟ">
+      <div class="content">
+        <h3>สูตรรักฉบับเชฟ</h3>
+        <p>เมื่ออาหารคือภาษารัก</p>
+        <a href="javascript:void(0);" onclick="openShopee('567890123', 'https://www.example.com/ดูซีรีส์5')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=เพลิงแค้นแสนรัก" alt="เพลิงแค้นแสนรัก">
+      <div class="content">
+        <h3>เพลิงแค้นแสนรัก</h3>
+        <p>รักต้องห้าม ท่ามกลางความแค้น</p>
+        <a href="javascript:void(0);" onclick="openShopee('678901234', 'https://www.example.com/ดูซีรีส์6')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=หวานใจนายซุปเปอร์สตาร์" alt="หวานใจนายซุปเปอร์สตาร์">
+      <div class="content">
+        <h3>หวานใจนายซุปเปอร์สตาร์</h3>
+        <p>เมื่อคนธรรมดาได้รักดารา</p>
+        <a href="javascript:void(0);" onclick="openShopee('789012345', 'https://www.example.com/ดูซีรีส์7')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=บันทึกรักนางฟ้า" alt="บันทึกรักนางฟ้า">
+      <div class="content">
+        <h3>บันทึกรักนางฟ้า</h3>
+        <p>รักโรแมนติกเหนือจินตนาการ</p>
+        <a href="javascript:void(0);" onclick="openShopee('890123456', 'https://www.example.com/ดูซีรีส์8')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=หัวใจในสายลมหนาว" alt="หัวใจในสายลมหนาว">
+      <div class="content">
+        <h3>หัวใจในสายลมหนาว</h3>
+        <p>อบอุ่นหัวใจกลางฤดูหนาว</p>
+        <a href="javascript:void(0);" onclick="openShopee('901234567', 'https://www.example.com/ดูซีรีส์9')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=รักรีเทิร์น" alt="รักรีเทิร์น">
+      <div class="content">
+        <h3>รักรีเทิร์น</h3>
+        <p>อดีตรักกลับมาทบทวนหัวใจ</p>
+        <a href="javascript:void(0);" onclick="openShopee('012345678', 'https://www.example.com/ดูซีรีส์10')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=คู่จิ้นฟินเวอร์" alt="คู่จิ้นฟินเวอร์">
+      <div class="content">
+        <h3>คู่จิ้นฟินเวอร์</h3>
+        <p>เคมีจิ้นกระจาย จนแฟนคลับใจละลาย</p>
+        <a href="javascript:void(0);" onclick="openShopee('123456780', 'https://www.example.com/ดูซีรีส์11')">ดูเลย</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://via.placeholder.com/300x450?text=ตามหาหัวใจ" alt="ตามหาหัวใจ">
+      <div class="content">
+        <h3>ตามหาหัวใจ</h3>
+        <p>การผจญภัยตามหาความรักที่แท้จริง</p>
+        <a href="javascript:void(0);" onclick="openShopee('234567890', 'https://www.example.com/ดูซีรีส์12')">ดูเลย</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openShopee(shopeeLink, redirectUrl) {
+  // เปิดแอป Shopee โดยใช้ลิงก์ที่เกี่ยวข้อง
+  window.location.href = shopeeLink;
+
+  setTimeout(function () {
+    // หากแอป Shopee ไม่เปิดภายใน 2 วินาที ให้ไปที่เว็บไซต์
+    window.location.href = redirectUrl;  // ลิงก์ดูซีรีส์ที่ต้องการ
+  }, 2000); // 2 วินาที
+}
+  </script>
+</body>
+</html>
